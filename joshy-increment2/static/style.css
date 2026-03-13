@@ -1,0 +1,16 @@
+
+* {
+    font-family: Roboto;
+    padding: 5px;
+    margin: 5px;
+    background-color: #111312;
+    color: #7FA1C4;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    Line-height: 1.5;
+    font-style: normal;
+}
+
+html {
+    background-color: #111312;
+}
