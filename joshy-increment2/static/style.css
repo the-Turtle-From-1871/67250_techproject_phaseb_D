@@ -1,4 +1,3 @@
-
 * {
     font-family: Roboto;
     padding: 5px;
@@ -17,4 +16,43 @@ html {
 
 img {
     border-radius: 20px;
+}
+
+#logo {
+  width: 18%;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7FA1C4;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+    border: 1px solid #BEA90C;
+}
+
+#navselected {
+    color: #92ad70;
+}
+
+.CTA {
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.CTA:hover {
+    border: 2px solid #BEA90C;
+    background-color: #BEA90C;
+}
+
+footer {
+    margin-left: 13px;
 }
