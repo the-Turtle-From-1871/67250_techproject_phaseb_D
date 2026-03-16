@@ -1,0 +1,90 @@
+* {
+    font-family: Roboto;
+    padding: 5px;
+    margin: 5px;
+    background-color: #111312;
+    color: #7FA1C4;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    Line-height: 1.5;
+    font-style: normal;
+}
+
+html {
+    background-color: #111312;
+}
+
+img {
+    border-radius: 20px;
+}
+
+#logo {
+  width: 18%;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7FA1C4;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+    border: 1px solid #BEA90C;
+}
+
+#navselected {
+    color: #92ad70;
+}
+
+.CTA {
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    font-weight: 500;
+}
+
+.CTA:hover {
+    border: 2px solid #BEA90C;
+    background-color: #BEA90C;
+}
+
+#homepage {
+    margin-left: 20px;
+}
+
+#checkout {
+    border-radius: 5px;
+}
+
+footer {
+   margin-left: 13px;
+   border-top: 1px solid #BEA90C;
+   padding: 10px 0;
+   text-align: center;
+   color: #7FA1C4;
+}
+
+th {
+    padding: 12px 0;
+    color: #7FA1C4;
+    width: fit-content;
+    border-bottom: 1px solid #7FA1C4;
+    border-top: 1px solid #7FA1C4;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+tr:nth-child(even) td {
+    background-color: #BEA90C;
+    color: #000000;
+}
+
+form * {
+  margin: auto;
+  text-align: center;
+}
+

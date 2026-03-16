@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./explore.html">Explore</a>
+            <a href="./exhibitions.html">Exhibitions</a>
+            <a href="./tickets.html">Tickets</a>
+            <a href="./checkout.html" id="navselected">Checkout</a>
+        </nav>
+    </header>
+
+    <br>
+    <form>
+        <label for="fullName">Name (First and Last):</label> <br>
+        <input type="text" id="fullName" name="fullName"><br><br>
+        <label for="email">Email</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="ticketQuantity">Ticket Quantity (max 10)</label><br>
+        <input type="number" max="10" id="ticketQuantity" name="ticketQuantity"><br><br>
+        <input class="CTA" id="checkout" type="submit" value="Submit">
+    </form>
+
+    <br>
+
+    <footer>&copy; 2026 MonoMuse Inc. All rights reserved.</footer>
+</body>
+</html>
