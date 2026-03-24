@@ -30,10 +30,11 @@ img {
   min-width: 100px;
   width: 18vw;
   display: flex;
+  border-radius: 10px;
   background-color: #E4AC83;
 }
 
-#navBar {
+.nav_bar {
     margin-left: auto;
 }
 
@@ -122,7 +123,7 @@ form * {
     grid-area: heading;
 }
 
-#main-image {
+.main-image {
   width: 100%;
   height: auto;
   display: block;
@@ -164,8 +165,39 @@ form * {
 .explore-grid {
     display: grid;
     grid-template-areas: 
-        "heading heading"
-        "image description"
-        "button button";
+        "heading nav_bar"
+        "image image"
+        "mission mission"
+        "milestones milestones";
     gap: 20px;
 }
+
+.main-image {
+    grid-area: image;
+    max-width: 50vw;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .explore-grid {
+        display: grid;
+        grid-template-areas: 
+            "heading nav_bar"
+            "image image"
+            "mission mission"
+            "milestones milestones";
+        gap: 20px;
+    }
+    .main-image {
+        max-width: 90vw;
+    }
+}
+
+.pageTitle {
+    grid-area: heading;
+}
+
+.nav_bar {
+    grid-area: nav_bar;
+}
+
