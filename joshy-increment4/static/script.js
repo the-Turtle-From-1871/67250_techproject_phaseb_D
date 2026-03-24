@@ -79,7 +79,7 @@ function greeting(hour) {
     // console.log(hour);
     var welcome = "and welcome to MonoMuse."
     if (hour < 5 | hour >= 20) {
-        document.getElementById("greeting").innerHTML = "Good night" ;
+        document.getElementById("greeting").innerHTML = "Good night, " + welcome;
     } else if (hour < 12) {
         document.getElementById("greeting").innerHTML = "Good morning, " + welcome;
     } else if (hour < 18) {

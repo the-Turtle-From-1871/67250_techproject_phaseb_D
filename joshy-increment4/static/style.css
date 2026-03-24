@@ -22,9 +22,8 @@ html {
 }
 
 img {
-    min-width: 300px;
-    width: 45vw;
-    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 #logo {
@@ -55,9 +54,13 @@ nav a:hover {
     color: #92ad70;
 }
 
+.main {
+    display: inline;
+}
+
 .CTA {
     background-color: #E4AC83;
-    border-radius: 20px;
+    border-radius: 10px;
     color: black;
     font-weight: 500;
     padding: 5px;
@@ -104,3 +107,65 @@ form * {
   text-align: center;
 }
 
+
+/* CSS Grid for home page */
+.home-grid {
+    display: grid;
+    grid-template-areas: 
+        "heading heading"
+        "image description"
+        "button button";
+    gap: 20px;
+}
+
+#greeting {
+    grid-area: heading;
+}
+
+#main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 45px; 
+  grid-area: image;
+}
+
+.main {
+    grid-area: description;
+    align-self: center;
+}
+
+#homepage {
+    grid-area: button;
+    justify-self: left;
+}
+
+.pageTitle {
+    background: #E4AC83;
+    color: #092A4A;
+    font-weight: 800;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 10px;
+}
+
+/* home-grid for smaller screens */
+@media screen and (max-width: 768px) {
+    .home-grid {
+        grid-template-areas:
+            "heading"
+            "image"
+            "description"
+            "button";  
+    }
+}
+
+/* CSS Grid for explore page */
+.explore-grid {
+    display: grid;
+    grid-template-areas: 
+        "heading heading"
+        "image description"
+        "button button";
+    gap: 20px;
+}
