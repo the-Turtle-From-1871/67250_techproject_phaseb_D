@@ -30,11 +30,16 @@ img {
   min-width: 100px;
   width: 18vw;
   display: flex;
-  border-radius: 10px;
   background-color: #E4AC83;
 }
 
+<<<<<<< HEAD
 
+=======
+#navBar {
+    margin-left: auto;
+}
+>>>>>>> parent of 57ad6fd (update)
 
 nav a {
   text-decoration: none;
@@ -122,7 +127,7 @@ form * {
     grid-area: heading;
 }
 
-.main-image {
+#main-image {
   width: 100%;
   height: auto;
   display: block;
@@ -169,6 +174,7 @@ form * {
 .explore-grid {
     display: grid;
     grid-template-areas: 
+<<<<<<< HEAD
         "heading nav_bar"
         "image image"
         "mission milestones";
@@ -228,3 +234,10 @@ form * {
     justify-self: end;
 }
 
+=======
+        "heading heading"
+        "image description"
+        "button button";
+    gap: 20px;
+}
+>>>>>>> parent of 57ad6fd (update)
