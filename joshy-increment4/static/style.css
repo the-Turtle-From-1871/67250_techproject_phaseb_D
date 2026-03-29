@@ -34,9 +34,7 @@ img {
   background-color: #E4AC83;
 }
 
-.nav_bar {
-    margin-left: auto;
-}
+
 
 nav a {
   text-decoration: none;
@@ -113,6 +111,7 @@ form * {
 .home-grid {
     display: grid;
     grid-template-areas: 
+        "logo nav-bar"
         "heading heading"
         "image description"
         "button button";
@@ -154,11 +153,16 @@ form * {
 @media screen and (max-width: 768px) {
     .home-grid {
         grid-template-areas:
+            "logo nav_bar"
             "heading"
             "image"
             "description"
             "button";  
     }
+}
+
+#logo {
+    grid-area: logo;
 }
 
 /* CSS Grid for explore page */
@@ -167,9 +171,20 @@ form * {
     grid-template-areas: 
         "heading nav_bar"
         "image image"
-        "mission mission"
-        "milestones milestones";
+        "mission milestones";
     gap: 20px;
+}
+
+.pageTitle {
+    grid-area: heading;
+}
+
+.mission {
+    grid-area: mission;
+}
+
+.milestones {
+    grid-area: milestones;
 }
 
 .main-image {
@@ -193,11 +208,23 @@ form * {
     }
 }
 
+.mission {
+    grid-area: mission;
+}
+
+.milestones {
+    grid-area: milestones;
+}
+
+
 .pageTitle {
     grid-area: heading;
 }
 
 .nav_bar {
     grid-area: nav_bar;
+    display: flex;
+    justify-content: flex-end;
+    justify-self: end;
 }
 
