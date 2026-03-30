@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse Museum</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <script src="./static/script.js" defer></script>
+</head>
+<body>
+    <main class="home-grid">
+        <img id="logo" src="./static/MM_Logo.png" alt="MonoMuse Museum Logo">
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="views/explore.html">Explore</a></li>
+                <li><a href="views/exhibitions.html">Exhibitions</a></li>
+                <li><a href="views/buytickets.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <h2 id="greeting">Welcome to MonoMuse</h2>
+        
+        <!-- <div class="main-image"> -->
+            <img class="main-image" src="./static/brad_gobright.jpg" alt="Brad Gobright climbing El Capitan">
+        <!-- </div> -->
+        
+        <div class="main-text">
+            <p id="description">
+                MonoMuse is a contemporary museum dedicated to exploring the 
+                intersection of art and technology. Through focusing on a single 
+                topic or person at a time, MonoMuse aims to immerse visitors in
+                the history and stories of a person or place. Regardless of if
+                you are a new or returning visitor, there is a new perspective 
+                to find in each exhibit. 
+            </p> 
+        </div>
+        <button class="CTA" onclick="window.location.href='views/checkout.html'">Buy Tickets</button>
+
+        <p id="shortPar">This is not hidden by default</p>
+        <p hidden id="longerPar">This is hidden by default and revealed by the button</p>
+        <button id="readMore">Read More</button>
+        <button hidden id="readLess">Read Less</button>
+    </main>
+
+    <footer id="copyright">
+        <p>&copy; 2026 MonoMuse Museum</p>
+    </footer>
+
+</body>
+</html>
