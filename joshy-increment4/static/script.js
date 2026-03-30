@@ -200,3 +200,9 @@ document.getElementById("prev")?.addEventListener("click", function() {
     updateCalendar();
 });
 updateCalendar();
+
+const button = document.getElementById("submit");
+
+button.addEventListener("click", function() {
+    alert("Redirecting to payment system...");
+});

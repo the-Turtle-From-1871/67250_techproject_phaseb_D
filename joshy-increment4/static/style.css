@@ -443,3 +443,7 @@ td {
         max-width: 98vw;
     }
 }
+
+.subtitle {
+    font-weight: bold;
+}
