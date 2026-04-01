@@ -81,7 +81,9 @@ nav a:hover {
     border-radius: 10px;
     color: black;
     font-weight: 500;
-    padding: 5px;
+    padding: 1vw;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 .CTA:hover {
@@ -100,7 +102,8 @@ nav a:hover {
 }
 
 footer {
-   margin-left: 13px;
+   margin-left: auto;
+   margin-right: auto;
    border-top: 1px solid #BEA90C;
    padding: 10px 0;
    text-align: center;
@@ -192,9 +195,6 @@ form * {
 .milestones {
     grid-area: milestones;
 }
-
-
-
 
 .calendar {
     display: flex;
@@ -381,11 +381,59 @@ td {
     margin-left: 3px;
 }
 
+.exhibit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "pageTitle nav_bar"
+        "exhibit1 exhibit1"
+        "desc1 desc1"
+        "exhibit2 exhibit2"
+        "desc2 desc2";
+    gap: 20px;
+    max-width: 100%;
+}
+
+.pageTitle {
+    grid-area: pageTitle;
+    display: inline;
+}
+
+.nav_bar {
+    grid-area: nav_bar;
+    display: inline;
+    margin-left: auto;
+}
+
+#exhibit1 {
+    grid-area: exhibit1;
+}
+
+#desc1 {
+    grid-area: desc1;
+}
+
+#exhibit2 {
+    grid-area: exhibit2;
+}
+
+#desc2 {
+    grid-area: desc2;
+}
+
+#hamburger {
+    display: none;
+}
+
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+    .responsive {
+        display: none;
+    }
+
     .home-grid {
         grid-template-areas:
-            "logo nav_bar"
+            "logo hamburger"
             "heading heading"
             "image image"
             "description description"
@@ -394,17 +442,32 @@ td {
 
     .explore-grid {
         grid-template-areas: 
-            "heading nav_bar"
+            "pageTitle hamburger"
             "image image"
             "mission mission"
             "milestones milestones";
+        gap: 20px;
+        max-width: 90%;
+    }
+
+    .exhibit-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "pageTitle hamburger"
+            "exhibit1 exhibit1"
+            "desc1 desc1"
+            "exhibit2 exhibit2"
+            "desc2 desc2";
+        gap: 20px;
+        max-width: 100%;
     }
 
     .checkout-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-            "pageTitle nav_bar"
+            "pageTitle hamburger"
             "heading heading"
             "date date"
             "calendar calendar"
@@ -414,14 +477,28 @@ td {
         max-width: 100%;
     }
 
+    .nav_bar {
+        grid-area: hamburger;
+    }
+
+    #hamburger {
+        display: flex;
+        grid-area: hamburger;
+    }
+
     .calendar {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
+        margin-right: 12vw;
     }
+    
+    .pageTitle {
+        grid-area: pageTitle;
+        display: inline;
+    }
+
     .ticket_desc {
         grid-area: description;
         display: flex;
@@ -434,16 +511,23 @@ td {
 
     .main-image {
         grid-area: image;
-        max-width: 99vw;
-        justify-content: center;
+        max-width: 80vw;
+        justify-content: left;
     }
 
     .main-text {
         grid-area: description;
         max-width: 98vw;
     }
+
 }
 
 .subtitle {
     font-weight: bold;
 }
+
+[hidden] {
+  display: none !important;
+}
+
+

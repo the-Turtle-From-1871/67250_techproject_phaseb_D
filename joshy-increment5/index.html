@@ -18,18 +18,17 @@
     <main class="home-grid">
         <img id="logo" src="./static/MM_Logo.png" alt="MonoMuse Museum Logo">
         <nav class="nav_bar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="views/explore.html">Explore</a></li>
-                <li><a href="views/exhibitions.html">Exhibitions</a></li>
-                <li><a href="views/buytickets.html">Checkout</a></li>
-            </ul>
-        </nav>
+            <a href="./index.html" class="responsive">Home</a>
+            <a href="./views/explore.html" class="responsive">Explore</a>
+            <a href="./views/exhibitions.html" class="responsive">Exhibitions</a>
+            <a href="./views.buytickets.html" class="responsive">Checkout</a>
+            <button id="hamburger">&#9776;</button>
+        </nav> 
+        
+
         <h2 id="greeting">Welcome to MonoMuse</h2>
         
-        <!-- <div class="main-image"> -->
-            <img class="main-image" src="./static/brad_gobright.jpg" alt="Brad Gobright climbing El Capitan">
-        <!-- </div> -->
+        <img class="main-image" src="./static/brad_gobright.jpg" alt="Brad Gobright climbing El Capitan">        <!-- </div> -->
         
         <div class="main-text">
             <p id="description">
@@ -41,12 +40,12 @@
                 to find in each exhibit. 
             </p> 
         </div>
-        <button class="CTA" onclick="window.location.href='views/checkout.html'">Buy Tickets</button>
+        <button class="CTA" onclick="window.location.href='views/buytickets.html'">Buy Tickets</button>
 
-        <p id="shortPar">This is not hidden by default</p>
+        <!-- <p id="shortPar">This is not hidden by default</p>
         <p hidden id="longerPar">This is hidden by default and revealed by the button</p>
         <button id="readMore">Read More</button>
-        <button hidden id="readLess">Read Less</button>
+        <button hidden id="readLess">Read Less</button> -->
     </main>
 
     <footer id="copyright">

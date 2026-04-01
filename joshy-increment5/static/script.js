@@ -206,3 +206,9 @@ const button = document.getElementById("submit");
 button.addEventListener("click", function() {
     alert("Redirecting to payment system...");
 });
+
+// menu reveal
+// $("#hamburger").click(function(){ 
+//     console.log("Hamburger clicked")
+//     $("#nav-toggle").toggle();  
+// });
