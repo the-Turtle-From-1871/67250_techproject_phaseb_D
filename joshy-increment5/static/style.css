@@ -562,6 +562,14 @@ td {
         align-items: center;
         justify-content: center;
         margin-right: 12vw;
+        /* width:  */
+    }
+
+    .calendar-header, #calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+        gap: 1px;
     }
     
     .pageTitle {
