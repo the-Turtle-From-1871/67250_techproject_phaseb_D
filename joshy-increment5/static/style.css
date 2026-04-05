@@ -260,6 +260,8 @@ form * {
 
 .calendar { 
     grid-area: calendar;
+    margin-left: auto;
+    margin-left: auto;
 }
 
 #date {
@@ -269,6 +271,7 @@ form * {
 .pageTitle {
     grid-area: pageTitle;
 }
+
 .nav_bar {
     grid-area: nav_bar;
 }
