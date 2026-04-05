@@ -321,7 +321,7 @@ form * {
 }
 
 #calendar-grid div {
-    padding: 1vw;
+    /* padding: 1vw; */
     border: 1px solid transparent;
     color: #B8A2A6;
     border-radius: 50%;
