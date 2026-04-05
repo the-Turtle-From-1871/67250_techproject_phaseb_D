@@ -203,12 +203,25 @@ updateCalendar();
 
 const button = document.getElementById("submit");
 
-button.addEventListener("click", function() {
+button?.addEventListener("click", function() {
     alert("Redirecting to payment system...");
 });
 
 // menu reveal
-// $("#hamburger").click(function(){ 
-//     console.log("Hamburger clicked")
-//     $("#nav-toggle").toggle();  
-// });
+$("#hamburger").click(function(){ 
+    $('#nav-links-container').toggleClass('active');
+});
+
+if (typeof L !== 'undefined' && document.getElementById('map')) {
+    var map = L.map('map').setView([21.3245, -157.9251], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var marker = L.marker([21.3245, -157.9251]).addTo(map);
+
+    marker.bindPopup("MonoMuse!").openPopup();
+}
+
+

@@ -2,7 +2,7 @@
     font-family: Roboto;
     padding: 5px;
     margin: 5px;
-    background-color: #2D2F34;
+    /* background-color: #2D2F34; */
     color: #B8A2A6;
     font-optical-sizing: auto;
     font-weight: 100;
@@ -175,6 +175,7 @@ form * {
     grid-area: heading;
     width: fit-content;
     display: inline;
+    height: fit-content;
 }
 
 /* CSS Grid for explore page */
@@ -232,6 +233,7 @@ form * {
     grid-area: continue_to_checkout;
     font-weight: bold;
     width: 50vw;
+    background-color: #2D2F34;
 }
 
 #continue:hover {
@@ -353,6 +355,16 @@ form * {
     border-radius: 1vw 1vw 0 0;
 }
 
+#prev {
+    background-color: #2D2F34;
+}
+
+#next {
+    background-color: #2D2F34;
+}
+
+
+
 th {
     padding: 12px 0;
     color: #2D2F34;
@@ -425,6 +437,11 @@ td {
     display: none;
 }
 
+#video {
+    width: 50vw;
+    height: 25vw;
+}
+
 /* Media Queries */
 @media screen and (max-width: 600px) {
     .responsive {
@@ -477,13 +494,66 @@ td {
         max-width: 100%;
     }
 
-    .nav_bar {
+    #video {
+        width: 70vw;
+        height: 35vw;
+    }
+
+    /* .nav_bar {
         grid-area: hamburger;
+        position: relative; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     #hamburger {
         display: flex;
         grid-area: hamburger;
+    } */
+
+    .nav_bar {
+        grid-area: hamburger;
+        position: relative; 
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #nav-links-container {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;       
+        right: 0;
+        min-width: 10rem; 
+        background-color: #2D2F34;
+        border: 0.0625rem solid #E4AC83; 
+        border-radius: 0.5rem;
+        padding: 1rem;
+        z-index: 10;
+    }
+
+    #nav-links-container.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-links-container a {
+        display: block;
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+        text-align: right;
+    }
+
+    #hamburger {
+        /* height: 10vw;
+        width: 10vw; */
+        display: flex;
+        background: none;
+        padding: 0.5rem 0.8rem;
+        font-size: 1.5rem; 
+        cursor: pointer;
     }
 
     .calendar {
@@ -497,6 +567,7 @@ td {
     .pageTitle {
         grid-area: pageTitle;
         display: inline;
+        height: fit-content;
     }
 
     .ticket_desc {
@@ -527,7 +598,18 @@ td {
 }
 
 [hidden] {
-  display: none !important;
+  display: none;
 }
 
 
+
+
+#map { 
+    /* background-color: transparent; */
+    height: 25vw; 
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vw;
+    background-color: black;
+}
