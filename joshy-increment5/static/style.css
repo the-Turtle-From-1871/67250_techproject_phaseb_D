@@ -554,6 +554,15 @@ td {
         text-align: center;
         gap: 5px;
         max-width: 90vw !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .calendar-header div,
+    #calendar-grid div {
+        margin: 0 !important;
+        padding: 10px !important;
+        box-sizing: border-box;
     }
     
     .pageTitle {
