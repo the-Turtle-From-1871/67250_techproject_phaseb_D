@@ -2,7 +2,6 @@
     font-family: Roboto;
     padding: 5px;
     margin: 5px;
-    /* background-color: #2D2F34; */
     color: #B8A2A6;
     font-optical-sizing: auto;
     font-weight: 100;
@@ -82,8 +81,6 @@ nav a:hover {
     color: black;
     font-weight: 500;
     padding: 1vw;
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 
 .CTA:hover {
@@ -197,18 +194,10 @@ form * {
     grid-area: milestones;
 }
 
-.calendar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .dateSelect {
     display: flex;
     flex-direction: row;
 }
-
 
 .checkout-grid {
     display: grid;
@@ -258,10 +247,13 @@ form * {
     justify-content: center;
 }
 
-.calendar { 
+.calendar {
     grid-area: calendar;
-    margin-left: auto;
-    margin-left: auto;
+    margin-left: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #date {
@@ -290,12 +282,22 @@ form * {
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
     gap: 5px;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    max-width: 400px;
+}
+
+.calendar-header div,
+#calendar-grid div {
+    margin: 0 !important;
+    padding: 10px !important;
+    box-sizing: border-box;
 }
 
 .calendar-header div {
     font-weight: 500;
     color: #7FA1C4;
-    padding-bottom: 5px;
 }
 
 .calendar-day {
@@ -324,7 +326,6 @@ form * {
 }
 
 #calendar-grid div {
-    /* padding: 1vw; */
     border: 1px solid transparent;
     color: #B8A2A6;
     border-radius: 50%;
@@ -342,14 +343,12 @@ form * {
     color: #000 !important;
 }
 
-
 .today {
     border: 2px solid #BEA90C !important;
 }
 
 #table-title {
     font-weight: 400;
-    /* margin-right: auto; */
 }
 
 #table-head th {
@@ -364,8 +363,6 @@ form * {
 #next {
     background-color: #2D2F34;
 }
-
-
 
 th {
     padding: 12px 0;
@@ -501,19 +498,6 @@ td {
         height: 35vw;
     }
 
-    /* .nav_bar {
-        grid-area: hamburger;
-        position: relative; 
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    #hamburger {
-        display: flex;
-        grid-area: hamburger;
-    } */
-
     .nav_bar {
         grid-area: hamburger;
         position: relative; 
@@ -549,8 +533,6 @@ td {
     }
 
     #hamburger {
-        /* height: 10vw;
-        width: 10vw; */
         display: flex;
         background: none;
         padding: 0.5rem 0.8rem;
@@ -563,15 +545,15 @@ td {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-right: 12vw;
-        /* width:  */
+        margin-left: 0;
     }
 
     .calendar-header, #calendar-grid {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         text-align: center;
-        gap: 1px;
+        gap: 5px;
+        max-width: 90vw !important;
     }
     
     .pageTitle {
@@ -600,7 +582,6 @@ td {
         grid-area: description;
         max-width: 98vw;
     }
-
 }
 
 .subtitle {
@@ -611,11 +592,7 @@ td {
   display: none;
 }
 
-
-
-
 #map { 
-    /* background-color: transparent; */
     height: 25vw; 
     width: 80vw;
     margin-left: auto;
