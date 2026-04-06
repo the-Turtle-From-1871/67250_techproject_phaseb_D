@@ -123,8 +123,8 @@ ActiveNav();
     $(this).prop('disabled', true);
   });
 
-// this is all to create the calendar on the checkout page
-// https://www.geeksforgeeks.org/javascript/how-to-design-a-simple-calendar-using-javascript/
+// calendar logic for checkout page
+// https://webdesign.tutsplus.com/learn-how-to-code-a-simple-javascript-calendar-and-datepicker--cms-108322t
 
 // current month and year
 let currentMonth = new Date().getMonth(); 
