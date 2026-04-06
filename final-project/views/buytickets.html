@@ -73,7 +73,13 @@
             <label for="fullName" class="form-label">Name (First and Last):</label> <br>
             <input type="text" id="fullName" name="fullName" class="input"><br><br>
             <label for="email" class="form-label">Email</label><br>
-            <input type="text" id="email" name="email" class="input"><br><br>
+            <input type="email" id="email" name="email" class="input"><br><br>
+            <label for="ticketType" class="form-label">Ticket Type</label><br>
+            <select id="ticketType" name="ticketType" class="input">
+                <option value="general">General</option>
+                <option value="student">Student</option>
+                <option value="member">Member</option>
+            </select><br><br>
             <label for="ticketQuantity" class="form-label">Ticket Quantity (max 10)</label><br>
             <input type="number" max="10" id="ticketQuantity" name="ticketQuantity" class="input"><br><br>
             <input class="CTA" id="submit" type="submit" value="Submit">
