@@ -4,10 +4,21 @@
     margin: 5px;
     color: #B8A2A6;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 150;
     Line-height: 1.5;
     font-style: normal;
     box-sizing: border-box;
+}
+
+strong {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+}
+
+span {
+    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -182,8 +193,13 @@ form * {
     grid-template-areas: 
         "pageTitle nav_bar"
         "image image"
-        "mission milestones";
+        "mission milestones"
+        "donations hours";
     gap: 20px;
+}
+
+.donation {
+    grid-area: donations;
 }
 
 .mission {
@@ -198,6 +214,11 @@ form * {
     display: flex;
     flex-direction: row;
 }
+
+.hoursOfOperations {
+    grid-area: hours;
+}
+
 
 .checkout-grid {
     display: grid;
@@ -479,7 +500,9 @@ td {
             "pageTitle hamburger"
             "image image"
             "mission mission"
-            "milestones milestones";
+            "milestones milestones"
+            "donations donations"
+            "hours hours";
         gap: 20px;
         max-width: 90%;
     }

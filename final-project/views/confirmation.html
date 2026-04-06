@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed | MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+<body>
+    <div class="checkout-grid">
+        <h1 class="pageTitle">Success!</h1>
+        <nav class="nav_bar">
+            <div id="nav-links-container">
+                <a href="../index.html" class="links">Home</a>      
+                <a href="./explore.html" class="links">Explore</a>
+                <a href="./exhibitions.html" class="links">Exhibitions</a>
+                <a href="./buytickets.html" class="links">Checkout</a>
+            </div>
+        </nav>
+
+        <div class="confirmation-container" style="grid-area: heading; text-align: center; margin-top: 50px;">
+            <h2>Thank you for your purchase, <span id="conf-name">Visitor</span>!</h2>
+            <p>Your order for <strong><span id="conf-date"></span></strong> is confirmed.</p>
+            
+            <div class="order-details" style="background: #36393f; padding: 20px; border-radius: 15px; display: inline-block; margin: 20px auto; border: 1px solid #BEA90C;">
+                <p><strong>Order Number:</strong> #<span id="order-id"></span></p>
+                <p><strong>Total Charged:</strong> $<span id="conf-total">0.00</span></p>
+                <p><strong>Tickets sent to:</strong> <span id="conf-email"></span></p>
+            </div>
+
+            <br><br>
+            <a href="../index.html" class="CTA" style="text-decoration: none; display: inline-block;">Back to Home</a>
+        </div>
+    </div>
+    <footer id="copyright"></footer>
+</body>
+</html>

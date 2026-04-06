@@ -201,12 +201,6 @@ document.getElementById("prev")?.addEventListener("click", function() {
 });
 updateCalendar();
 
-const button = document.getElementById("submit");
-
-button?.addEventListener("click", function() {
-    alert("Redirecting to payment system...");
-});
-
 // menu reveal
 $("#hamburger").click(function(){ 
     $('#nav-links-container').toggleClass('active');
@@ -224,4 +218,58 @@ if (typeof L !== 'undefined' && document.getElementById('map')) {
     marker.bindPopup("MonoMuse!").openPopup();
 }
 
+// total price calculation
+const ticketPrices = {
+    general: 25.00,
+    student: 15.00,
+    member: 10.00
+};
 
+function updateTotal() {
+    const ticketType = document.getElementById('ticketType').value;
+    const quantity = parseInt(document.getElementById('ticketQuantity').value) || 0;
+    const total = ticketPrices[ticketType] * quantity;
+    document.getElementById('totalPrice').textContent = total.toFixed(2);
+}
+
+document.getElementById('ticketType')?.addEventListener('change', updateTotal);
+document.getElementById('ticketQuantity')?.addEventListener('input', updateTotal);
+
+
+const checkoutForm = document.getElementById("checkout-form");
+
+if (checkoutForm) {
+    checkoutForm.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        const name = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const total = document.getElementById('totalPrice').textContent;
+        const date = document.getElementById('date').textContent; 
+
+        localStorage.setItem('receiptName', name);
+        localStorage.setItem('receiptEmail', email);
+        localStorage.setItem('receiptTotal', total);
+        localStorage.setItem('receiptDate', date);
+
+        window.location.href = "confirmation.html";
+    });
+}
+
+function displayReceipt() {
+    const confNameDisplay = document.getElementById('conf-name');
+    
+    if (confNameDisplay) {
+        document.getElementById('conf-name').textContent = localStorage.getItem('receiptName') || "Visitor";
+        document.getElementById('conf-email').textContent = localStorage.getItem('receiptEmail') || "N/A";
+        document.getElementById('conf-total').textContent = localStorage.getItem('receiptTotal') || "0.00";
+        document.getElementById('conf-date').textContent = localStorage.getItem('receiptDate') || "Selected Date";
+        
+        const orderIdDisplay = document.getElementById('order-id');
+        if (orderIdDisplay) {
+            orderIdDisplay.textContent = Math.floor(100000 + Math.random() * 900000);
+        }
+    }
+}
+
+displayReceipt();

@@ -71,17 +71,26 @@
         <button id="continue">Checkout</button>
         <form action="" id="checkout-form" hidden>
             <label for="fullName" class="form-label">Name (First and Last):</label> <br>
-            <input type="text" id="fullName" name="fullName" class="input"><br><br>
+            <input required type="text" id="fullName" name="fullName" class="input"><br><br>
             <label for="email" class="form-label">Email</label><br>
-            <input type="email" id="email" name="email" class="input"><br><br>
+            <input required type="email" id="email" name="email" class="input"><br><br>
             <label for="ticketType" class="form-label">Ticket Type</label><br>
             <select id="ticketType" name="ticketType" class="input">
                 <option value="general">General</option>
                 <option value="student">Student</option>
                 <option value="member">Member</option>
             </select><br><br>
+
             <label for="ticketQuantity" class="form-label">Ticket Quantity (max 10)</label><br>
-            <input type="number" max="10" id="ticketQuantity" name="ticketQuantity" class="input"><br><br>
+            <input required type="number" min="1" max="10" id="ticketQuantity" name="ticketQuantity" class="input" inputmode="numeric"><br><br>
+            
+            <label for="zip_code" class="form-label">Zip Code</label><br>
+            <input type="text" id="zip_code" name="zip_code" class="input" pattern="[0-9]{5}" inputmode="numeric" maxlength="5"><br><br>
+
+            <input type="checkbox" id="mailingList" name="mailingList">
+            <label for="mailingList">Join our mailing list</label><br><br>
+            
+            <strong>Total: $<span id="totalPrice">0.00</span></strong> <br>
             <input class="CTA" id="submit" type="submit" value="Submit">
         </form>
     </div>
