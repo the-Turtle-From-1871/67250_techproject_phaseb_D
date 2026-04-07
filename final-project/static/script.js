@@ -171,6 +171,7 @@ document.getElementById('ticketType')?.addEventListener('change', updateTotal);
 document.getElementById('ticketQuantity')?.addEventListener('input', updateTotal);
 
 
+// confirmation page 
 const checkoutForm = document.getElementById("checkout-form");
 
 if (checkoutForm) {
